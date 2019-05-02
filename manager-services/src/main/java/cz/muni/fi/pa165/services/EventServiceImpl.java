@@ -119,9 +119,9 @@ public class EventServiceImpl implements EventService {
     public List<Event> findEventsWithoutLoss() {
         List<Event> events = eventDao.findAll();
         List<Event> returnedEvents = new ArrayList<>();
-
+        System.out.println(events.size()+"hhhhhhhhhh");
         for (Event event : events) {
-            if (event.getPlaceOfLoss() == null) {
+            if (null==event.getPlaceOfLoss()) {
                 returnedEvents.add(event);
             }
         }
@@ -132,9 +132,8 @@ public class EventServiceImpl implements EventService {
     public List<Event> findEventsWithoutFind() {
         List<Event> events = eventDao.findAll();
         List<Event> returnedEvents = new ArrayList<>();
-
         for (Event event : events) {
-            if (event.getPlaceOfFind() == null) {
+            if (event.getPlaceOfFind()==null) {
                 returnedEvents.add(event);
             }
         }

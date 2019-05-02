@@ -98,6 +98,7 @@ public class EventFacadeImpl implements EventFacade {
 
             Event event = eventService.findEventById(eventDTO.getId());
             User finder = mappingService.mapTo(eventDTO.getFinder(), User.class);
+            System.out.println(finder.getUserRole());
             eventService.addFinding(event, finder, eventDTO.getDateOfFind(), eventDTO.getPlaceOfFind());
             return event.getId();
         } catch (Exception ex) {
