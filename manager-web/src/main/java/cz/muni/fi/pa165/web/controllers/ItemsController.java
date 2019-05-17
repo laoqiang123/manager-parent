@@ -122,9 +122,8 @@ public class ItemsController {
     public final boolean haveEvent(@PathVariable("id") long id) throws Exception {
         logger.debug("rest haveEvent()");
         try {
-            
             for(EventDTO event : eventFacade.findAllEvents()) {
-                  if(event.getId() == id)  return true;
+                  if(event.getItem().getId()==id)  return true;
             }
             return false;
         } catch (Exception ex) {

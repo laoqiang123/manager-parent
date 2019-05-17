@@ -94,8 +94,8 @@
             <div ng-view class="view"></div>
         </div>
         <div id="footerwrap">
-        <div class="container">
-            <p>&copy;&nbsp;Masaryk University</p>
+        <div class="container" >
+            <p align="center">&copy;&nbsp;create by ljx</p>
         </div>
     </div>
     </body>
